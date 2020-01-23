@@ -6,11 +6,14 @@ import thunk from "redux-thunk";
 import {Provider} from "react-redux";
 
 import App from './App';
+import {dishesReducer} from "./store/reducers/dishesReducer/dishesReducer";
+import {ordersReducer} from "./store/reducers/ordersReducer/ordersReducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-
+    dishesReducer: dishesReducer,
+    ordersReducer: ordersReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));

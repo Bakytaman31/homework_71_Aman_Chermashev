@@ -1,0 +1,8 @@
+export const ON_CHANGE = 'ON_CHANGE';
+export const POST_DISH = 'POST_DISH';
+
+export const DISHES_REQUEST= 'DISHES_REQUEST';
+export const DISHES_SUCCESS = 'DISHES_SUCCESS';
+
+export const ORDERS_REQUEST = 'ORDERS_REQUEST';
+export const ORDERS_SUCCESS = 'ORDERS_SUCCESS';
