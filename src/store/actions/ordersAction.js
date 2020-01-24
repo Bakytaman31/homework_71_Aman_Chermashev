@@ -8,6 +8,13 @@ export const getOrders = () => {
     return async (dispatch) => {
         dispatch(ordersRequest());
         const response = await axiosApp.get('/orders.json');
-        dispatch(ordersSuccess(response));
+        dispatch(ordersSuccess(response.data));
+    }
+};
+
+export const completeOrder = id => {
+    return async (dispatch) => {
+        await axiosApp.delete(`/orders/${id}.json`);
+        dispatch(getOrders());
     }
 };

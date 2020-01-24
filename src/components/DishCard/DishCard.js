@@ -1,14 +1,15 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import './DishCard.css';
 
 const DishCard = props => {
     return (
-        <div>
+        <div id={props.id} className="DishCard">
             <img src={props.img} alt="img"/>
-            <span>{props.name}</span>
-            <span>{props.price} KGS</span>
-            <NavLink><button className="btn btn-warning">Edit</button></NavLink>
-            <button className="btn btn-danger" onClick={props.deleteDish}>Delete</button>
+            <p>{props.name}</p>
+            <p>{props.price} KGS</p>
+            <NavLink to={`/edit/${props.id}`}><button className="btn btn-warning">Edit</button></NavLink>
+            <button className="btn btn-danger" onClick={() => props.removeDish(props.id)}>Delete</button>
         </div>
     );
 };

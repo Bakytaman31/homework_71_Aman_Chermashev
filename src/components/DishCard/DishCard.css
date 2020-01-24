@@ -1,0 +1,12 @@
+.DishCard{
+    border: 2px solid #ccc;
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-bottom: 3%;
+}
+
+.DishCard img{
+    width: 40%;
+    margin-top: 2%;
+}

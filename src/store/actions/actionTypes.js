@@ -1,5 +1,6 @@
 export const ON_CHANGE = 'ON_CHANGE';
-export const POST_DISH = 'POST_DISH';
+
+export const EDIT_DISH = 'EDIT_DISH';
 
 export const DISHES_REQUEST= 'DISHES_REQUEST';
 export const DISHES_SUCCESS = 'DISHES_SUCCESS';
