@@ -11,27 +11,23 @@ class Dishes extends Component {
     };
 
     render() {
-        let content;
-        if (this.props.loading === false) {
-            content = <div>{Object.keys(this.props.dishes).map(dish => (
-                    <DishCard
-                        key={dish}
-                        id={dish}
-                        name={this.props.dishes[dish].name}
-                        price={this.props.dishes[dish].price}
-                        img={this.props.dishes[dish].image}
-                        removeDish={this.props.deleteDish}
-                    />
-                )
-            )}</div>
-        } else {
-            content = <h1>Loading...</h1>
-        }
+        const dishes = <div>{Object.keys(this.props.dishes).map(dish => (
+                <DishCard
+                    key={dish}
+                    id={dish}
+                    name={this.props.dishes[dish].name}
+                    price={this.props.dishes[dish].price}
+                    img={this.props.dishes[dish].image}
+                    removeDish={this.props.deleteDish}
+                />
+            )
+        )}</div>;
+        const loading = <h1>Loading...</h1>;
                 return (
                     <div>
                         <h1>Dishes</h1>
                         <NavLink to='/add'><button className='btn btn-primary'>Add Dish</button></NavLink>
-                        {content}
+                        {this.props.loading ? loading : dishes}
                     </div>
                 )
         }

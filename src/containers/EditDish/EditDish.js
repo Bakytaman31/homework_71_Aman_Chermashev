@@ -42,7 +42,7 @@ class EditDish extends Component {
                             autoComplete="off"
                     /></p>
                     <p><input
-                            type="number"
+                            type="text"
                             name="price"
                             placeholder="Price"
                             value={this.props.price}
