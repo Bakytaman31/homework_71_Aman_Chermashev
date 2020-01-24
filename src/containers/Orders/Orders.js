@@ -12,7 +12,6 @@ class Orders extends Component {
     render() {
         const dishes = this.props.dishes;
         const orders = this.props.orders;
-        console.log(Object.keys(orders).length);
         const noOrders = <h1>No Orders</h1>;
         const loading = <h1>Loading...</h1>;
         const ordersHtml = <div>
